@@ -45,6 +45,7 @@ export default function SelectComponent({
             value={selectedName}
             onChange={e => {setSelectedName(e.target.value), setShowCards(false)}}
             name="title"
+            className={styles.select}
           >
             {projectsData && projectsData.map(item => (
               <option key={item.id} value={item.title}>
@@ -60,6 +61,7 @@ export default function SelectComponent({
             value={selectedContactCountry}
             onChange={e => setSelectedContactCountry(e.target.value)}
             name="contactCountry"
+            className={styles.select}
           >
             {projectsData && projectsData.map(item => (
               <option key={item.id} value={item.contactCountry}>
@@ -75,6 +77,7 @@ export default function SelectComponent({
             value={selectedProjectCountry}
             onChange={e => setSelectedProjectCountry(e.target.value)}
             name="projectCountry"
+            className={styles.select}
           >
             {projectsData && projectsData.map(item => (
               <option key={item.id} value={item.country}>
@@ -84,7 +87,7 @@ export default function SelectComponent({
           </select>
         </div>
 
-        <button onClick={() => setShowCards(true)} className={styles.button}>Search</button>
+        <button onClick={() => setShowCards(true)} className={styles.button}>Show Projects</button>
 
       </div>
 

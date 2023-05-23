@@ -1,4 +1,4 @@
-import styles from './cards.module.css';
+import styles from './cards.module.scss';
 import Image from 'next/image';
 
 interface IUrl {

@@ -22,6 +22,12 @@
   gap: 5px;
 }
 
+.select {
+  padding: 5px;
+  /* border-right: 5px solid transparent; */
+  border-radius: 3px;
+}
+
 .button {
   border: none;
   padding: 12px;
