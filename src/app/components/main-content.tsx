@@ -23,7 +23,6 @@ interface IProject {
 }
 
 export default function MainContent() {
-
   const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
   const [isLoading, setIsLoading] = useState(false);
   const [projectsData, setProjectsData] = useState<IProject[]>([]);
@@ -41,7 +40,7 @@ export default function MainContent() {
       setIsLoading(false)
     };
     getData();
-  }, []);
+  }, [API_KEY]);
 
   return (
     <>

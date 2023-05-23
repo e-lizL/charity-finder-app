@@ -1,6 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import styles from './search-component.module.css';
 
 interface IProject {
@@ -18,6 +17,11 @@ interface ISelectComponent {
 }
 
 export default function SelectComponent({ projectsData }: ISelectComponent) {
+  const [selectedName, setSelectedName] = useState("");
+  const [selectedContactCountry, setSelectedContactCountry] = useState("");
+  const [selectedProjectCountry, setSelectedProjectCountry] = useState("");
+
+  console.log(selectedProjectCountry)
 
   return (
     <>
@@ -26,12 +30,13 @@ export default function SelectComponent({ projectsData }: ISelectComponent) {
 
         <div className={styles.selectWrapper}>
           <label htmlFor="title">Project Name:</label>
-          <select name="title" id="title">
+          <select
+            value={selectedName}
+            onChange={e => setSelectedName(e.target.value)}
+            name="title"
+          >
             {projectsData && projectsData.map(item => (
-              <option
-                value={item.title}
-                key={item.id}
-              >
+              <option key={item.id} value={item.title}>
                 {item.title}
               </option>
             ))}
@@ -40,12 +45,13 @@ export default function SelectComponent({ projectsData }: ISelectComponent) {
 
         <div className={styles.selectWrapper}>
           <label htmlFor="contactCountry">Contact Country:</label>
-          <select name="contactCountry" id="contactCountry">
+          <select
+            value={selectedContactCountry}
+            onChange={e => setSelectedContactCountry(e.target.value)}
+            name="contactCountry"
+          >
             {projectsData && projectsData.map(item => (
-              <option
-                value={item.contactCountry}
-                key={item.id}
-              >
+              <option key={item.id} value={item.contactCountry}>
                 {item.contactCountry}
               </option>
             ))}
@@ -53,13 +59,14 @@ export default function SelectComponent({ projectsData }: ISelectComponent) {
         </div>
 
         <div className={styles.selectWrapper}>
-          <label htmlFor="country">Project Target Country:</label>
-          <select name="country" id="country">
+          <label htmlFor="projectCountry">Project Target Country:</label>
+          <select
+            value={selectedProjectCountry}
+            onChange={e => setSelectedProjectCountry(e.target.value)}
+            name="projectCountry"
+          >
             {projectsData && projectsData.map(item => (
-              <option
-                value={item.country}
-                key={item.id}
-              >
+              <option key={item.id} value={item.country}>
                 {item.country}
               </option>
             ))}
