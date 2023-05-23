@@ -1,5 +1,24 @@
 /* placeholder */
 
 .container {
-  border: 1px solid red;
+  margin: 50px auto 50px;
+  width: 95%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.selectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: var(--green);
+  color: white;
 }

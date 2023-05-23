@@ -1,10 +1,10 @@
 "use client";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import styles from './search-component'
-const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
+import styles from './search-component.module.css'
 
 export default function SelectComponent() {
+  const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
   const [isLoading, setIsLoading] = useState(false);
   const [projectData, setProjectData] = useState([]);
 
@@ -23,44 +23,53 @@ export default function SelectComponent() {
     getData();
   }, []);
 
+
   return (
     <div className={styles.container}>
 
-      <label htmlFor="title">Project Name:</label>
-      <select name="title" id="title">
-        {projectData.map(item => (
-          <option
-            value={item.title}
-            key={item.id}
-          >
-            {item.title}
-          </option>
-        ))}
-      </select>
+      <div class={styles.selectWrapper}>
+        <label htmlFor="title">Project Name:</label>
+        <select name="title" id="title">
+          {projectData.map(item => (
+            <option
+              value={item.title}
+              key={item.id}
+            >
+              {item.title}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <label htmlFor="contactCountry">Contact Country:</label>
-      <select name="contactCountry" id="contactCountry">
-        {projectData.map(item => (
-          <option
-            value={item.contactCountry}
-            key={item.id}
-          >
-            {item.contactCountry}
-          </option>
-        ))}
-      </select>
+      <div class={styles.selectWrapper}>
+        <label htmlFor="contactCountry">Contact Country:</label>
+        <select name="contactCountry" id="contactCountry">
+          {projectData.map(item => (
+            <option
+              value={item.contactCountry}
+              key={item.id}
+            >
+              {item.contactCountry}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <label htmlFor="country">Project Target Country:</label>
-      <select name="country" id="country">
-        {projectData.map(item => (
-          <option
-            value={item.country}
-            key={item.id}
-          >
-            {item.country}
-          </option>
-        ))}
-      </select>
+      <div class={styles.selectWrapper}>
+        <label htmlFor="country">Project Target Country:</label>
+        <select name="country" id="country">
+          {projectData.map(item => (
+            <option
+              value={item.country}
+              key={item.id}
+            >
+              {item.country}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <button className={styles.button}>Search</button>
 
     </div>
   )
