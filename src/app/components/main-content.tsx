@@ -29,7 +29,7 @@ export default function MainContent() {
   const [selectedName, setSelectedName] = useState("Cyclone Mocha Relief Fund");
   const [selectedContactCountry, setSelectedContactCountry] = useState("");
   const [selectedProjectCountry, setSelectedProjectCountry] = useState("");
-  const [showCards, setShowCards] = useState(false);
+  const [showCards, setShowCards] = useState(true);
 
   useEffect(() => {
     const apiUrl = `https://api.globalgiving.org/api/public/projectservice/featured/projects.json?api_key=${API_KEY}`;

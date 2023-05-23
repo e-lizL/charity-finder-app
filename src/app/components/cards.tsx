@@ -37,9 +37,33 @@ export default function Cards({
   console.log(showCards)
 
   return (
-    <div className={styles.wrapper}>
-      {projectsData && showCards && projectsData.map(item => {
-        if (item.title === selectedName) {
+    <>
+      <div className={styles.wrapper}>
+        {projectsData && showCards && projectsData.map(item => {
+          if (item.title === selectedName) {
+            return (
+              <div className={styles.card} key={item.id} >
+                <h1>Chosen Project</h1>
+                <Image
+                  src={item.image.imagelink[2].url}
+                  alt={`${item.title} image`}
+                  width={500}
+                  height={500}
+                  className={styles.image}
+                />
+                <div className={styles.textWrapper}>
+                  <a href={item.projectLink} className={styles.title}>{item.title}</a>
+                  <div>{item.contactAddress}</div>
+                  <div>id: {item.id}</div>
+                </div>
+              </div>
+            )
+          }
+        })}
+      </div>
+      <h1>All Projects:</h1>
+      <div className={styles.wrapper}>
+        {projectsData && projectsData.map(item => {
           return (
             <div className={styles.card} key={item.id} >
               <Image
@@ -56,9 +80,9 @@ export default function Cards({
               </div>
             </div>
           )
-        }
-      })}
-    </div>
+        })}
+      </div>
+    </>
   )
 }
 const array = [1, 2, 3, 4, 5];
