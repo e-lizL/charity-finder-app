@@ -23,8 +23,6 @@ interface ICards {
 
 export default function Cards({ projectsData }: ICards) {
 
-  console.log(projectsData[0].image)
-
   return (
     <div className={styles.wrapper}>
       {projectsData && projectsData.map(item => (
@@ -36,9 +34,11 @@ export default function Cards({ projectsData }: ICards) {
             height={500}
             className={styles.image}
           />
-          <div>{item.id}</div>
-          <div>{item.title}</div>
-          <div>{item.contactAddress}</div>
+          <div className={styles.textWrapper}>
+            <div className={styles.title}>{item.title}</div>
+            <div>{item.contactAddress}</div>
+            <div>id: {item.id}</div>
+          </div>
           {/* <div>{item.projectLink}</div> */}
         </div>
       ))}

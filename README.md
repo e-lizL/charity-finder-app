@@ -18,15 +18,15 @@ including:
     - Countries the organization serves
 -   [X] replace dummy data
 -   [X] User can see a 'Search' button
-
-
-### In Progress
--   [ ] User can see organization information cards in the search results area
+-   [X] User can see organization information cards in the search results area
 containing:
     - ID
     - Name
     - Address
     - Logo
+
+
+### In Progress
 
 
 ## Basic Features
