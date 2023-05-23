@@ -1,6 +1,8 @@
 
 export default function SelectComponent() {
 
+const API_KEY = process.env.GLOBAL_GIVING_API_KEY
+
   const mockData = [
     {
       name: "comic-relief",
