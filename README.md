@@ -9,10 +9,10 @@
 ## Condensed Instructions
 ## Done
 -   [X] User can see a page heading containing the application name.
+-   [X] User can see an overview of what the app is intended for in 'splash'
 
 
 ## Basic Features
--   [ ] User can see an overview of what the app is intended for in 'splash'
 page format.
 -   [ ] User can see a search area containing an set of drop down boxes that
 allow the user to specify search criteria for charitable organizations
