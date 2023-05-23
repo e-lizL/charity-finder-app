@@ -26,6 +26,10 @@ export default function MainContent() {
   const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
   const [isLoading, setIsLoading] = useState(false);
   const [projectsData, setProjectsData] = useState<IProject[]>([]);
+  const [selectedName, setSelectedName] = useState("Cyclone Mocha Relief Fund");
+  const [selectedContactCountry, setSelectedContactCountry] = useState("");
+  const [selectedProjectCountry, setSelectedProjectCountry] = useState("");
+  const [showCards, setShowCards] = useState(false);
 
   useEffect(() => {
     const apiUrl = `https://api.globalgiving.org/api/public/projectservice/featured/projects.json?api_key=${API_KEY}`;
@@ -47,9 +51,27 @@ export default function MainContent() {
       {isLoading && (<div>loading...</div>)}
       <div className={styles.container}>
 
-        <SearchComponent projectsData={projectsData} />
+        <SearchComponent
+          projectsData={projectsData}
+          selectedName={selectedName}
+          setSelectedName={setSelectedName}
+          selectedContactCountry={selectedContactCountry}
+          setSelectedContactCountry={setSelectedContactCountry}
+          selectedProjectCountry={selectedProjectCountry}
+          setSelectedProjectCountry={setSelectedProjectCountry}
+          setShowCards={setShowCards}
+        />
 
-        <Cards projectsData={projectsData}/>
+        <Cards
+          projectsData={projectsData}
+          selectedName={selectedName}
+          setSelectedName={setSelectedName}
+          selectedContactCountry={selectedContactCountry}
+          setSelectedContactCountry={setSelectedContactCountry}
+          selectedProjectCountry={selectedProjectCountry}
+          setSelectedProjectCountry={setSelectedProjectCountry}
+          showCards={showCards}
+        />
 
       </div>
     </>

@@ -1,5 +1,5 @@
-"use client";
-import React, { useState } from 'react';
+// "use client";
+import React from 'react';
 import styles from './search-component.module.css';
 
 interface IProject {
@@ -13,15 +13,26 @@ interface IProject {
 }
 
 interface ISelectComponent {
-  projectsData: IProject[];
+  projectsData: IProject[],
+  selectedName: string,
+  setSelectedName: (value: string) => void,
+  selectedContactCountry: string,
+  setSelectedContactCountry: (value: string) => void,
+  selectedProjectCountry: string,
+  setSelectedProjectCountry: (value: string) => void,
+  setShowCards: (value: boolean) => void,
 }
 
-export default function SelectComponent({ projectsData }: ISelectComponent) {
-  const [selectedName, setSelectedName] = useState("");
-  const [selectedContactCountry, setSelectedContactCountry] = useState("");
-  const [selectedProjectCountry, setSelectedProjectCountry] = useState("");
-
-  console.log(selectedProjectCountry)
+export default function SelectComponent({
+  projectsData,
+  selectedName,
+  setSelectedName,
+  selectedContactCountry,
+  setSelectedContactCountry,
+  selectedProjectCountry,
+  setSelectedProjectCountry,
+  setShowCards,
+}: ISelectComponent) {
 
   return (
     <>
@@ -32,7 +43,7 @@ export default function SelectComponent({ projectsData }: ISelectComponent) {
           <label htmlFor="title">Project Name:</label>
           <select
             value={selectedName}
-            onChange={e => setSelectedName(e.target.value)}
+            onChange={e => {setSelectedName(e.target.value), setShowCards(false)}}
             name="title"
           >
             {projectsData && projectsData.map(item => (
@@ -73,7 +84,7 @@ export default function SelectComponent({ projectsData }: ISelectComponent) {
           </select>
         </div>
 
-        <button className={styles.button}>Search</button>
+        <button onClick={() => setShowCards(true)} className={styles.button}>Search</button>
 
       </div>
 
