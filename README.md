@@ -10,16 +10,20 @@
 ## Done
 -   [X] User can see a page heading containing the application name.
 -   [X] User can see an overview of what the app is intended for in 'splash'
-
-
-## Basic Features
-page format.
--   [ ] User can see a search area containing an set of drop down boxes that
+-   [X] User can see a search area containing an set of drop down boxes that
 allow the user to specify search criteria for charitable organizations
 including:
     - Organization name
     - Organizations home country
     - Countries the organization serves
+
+
+### In Progress
+
+
+## Basic Features
+page format.
+-   [ ] replace dummy data
 -   [ ] User can see a 'Search' button
 -   [ ] User can click on the 'Search' button to display information cards
 for the matching organizations in a search results area.
