@@ -19,12 +19,12 @@ including:
 
 
 ### In Progress
+-   [ ] replace dummy data
+-   [ ] User can see a 'Search' button
 
 
 ## Basic Features
 page format.
--   [ ] replace dummy data
--   [ ] User can see a 'Search' button
 -   [ ] User can click on the 'Search' button to display information cards
 for the matching organizations in a search results area.
 -   [ ] User can see organization information cards in the search results area
