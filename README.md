@@ -10,33 +10,27 @@
 ## Done
 -   [X] User can see a page heading containing the application name.
 -   [X] User can see an overview of what the app is intended for in 'splash'
--   [X] User can see a search area containing an set of drop down boxes that
-allow the user to specify search criteria for charitable organizations
-including:
+-   [X] User can see a search area containing an set of drop down boxes that allow the user to specify search criteria for charitable organizations including:
     - Organization name
     - Organizations home country
     - Countries the organization serves
 -   [X] replace dummy data
 -   [X] User can see a 'Search' button
--   [X] User can see organization information cards in the search results area
-containing:
+-   [X] User can see organization information cards in the search results area containing:
     - ID
     - Name
     - Address
     - Logo
 -   [X] User can click the logo in the organizations information card to open a
 new window to that organizations home page.
+-   [X] User can see a page footer with links to your GitHub and social media accounts including social media icons (like the Twitter icon).
 
 
 ### In Progress
--   [ ] User can see a page footer with links to your GitHub and social media
-accounts including social media icons (like the Twitter icon).
+-   [ ] User can click on the 'Search' button to display information cards for the matching organizations in a search results area.
 
 
 ## Basic Features
-page format.
--   [ ] User can click on the 'Search' button to display information cards
-for the matching organizations in a search results area.
 
 
 ## Bonus Features
