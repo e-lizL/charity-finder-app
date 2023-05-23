@@ -13,6 +13,7 @@
 }
 
 .blurbImgWrapper {
+  padding: 0 15px;
   @media (min-width: 900px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
