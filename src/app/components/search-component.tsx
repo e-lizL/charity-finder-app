@@ -7,7 +7,10 @@ interface IProject {
   title: string,
   contactCountry: string,
   country: string,
-  id: number
+  id: number,
+  contactAddress: string,
+  projectLink: string,
+  imageLink: string
 }
 
 export default function SelectComponent() {
@@ -15,6 +18,8 @@ export default function SelectComponent() {
   const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
   const [isLoading, setIsLoading] = useState(false);
   const [projectsData, setProjectsData] = useState<IProject[]>([]);
+
+  console.log(projectsData[0].imageLink);
 
   useEffect(() => {
     const apiUrl = `https://api.globalgiving.org/api/public/projectservice/featured/projects.json?api_key=${API_KEY}`;
@@ -78,6 +83,17 @@ export default function SelectComponent() {
         </div>
 
         <button className={styles.button}>Search</button>
+
+        {projectsData && projectsData.map(item => (
+          <div key={item.id} >
+            <div>{item.id}</div>
+            <div>{item.title}</div>
+            <div>{item.contactAddress}</div>
+            <div>{item.projectLink}</div>
+            <div>{item.imageLink}</div>
+          </div>
+        ))}
+
       </div>
     </>
   )

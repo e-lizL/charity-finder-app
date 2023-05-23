@@ -16,23 +16,23 @@ including:
     - Organization name
     - Organizations home country
     - Countries the organization serves
+-   [X] replace dummy data
+-   [X] User can see a 'Search' button
 
 
 ### In Progress
--   [ ] replace dummy data
--   [ ] User can see a 'Search' button
-
-
-## Basic Features
-page format.
--   [ ] User can click on the 'Search' button to display information cards
-for the matching organizations in a search results area.
 -   [ ] User can see organization information cards in the search results area
 containing:
     - ID
     - Name
     - Address
     - Logo
+
+
+## Basic Features
+page format.
+-   [ ] User can click on the 'Search' button to display information cards
+for the matching organizations in a search results area.
 -   [ ] User can click the logo in the organizations information card to open a
 new window to that organizations home page.
 -   [ ] User can see a page footer with links to your GitHub and social media
