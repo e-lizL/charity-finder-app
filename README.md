@@ -24,6 +24,8 @@ containing:
     - Name
     - Address
     - Logo
+-   [X] User can click the logo in the organizations information card to open a
+new window to that organizations home page.
 
 
 ### In Progress
@@ -33,8 +35,6 @@ containing:
 page format.
 -   [ ] User can click on the 'Search' button to display information cards
 for the matching organizations in a search results area.
--   [ ] User can click the logo in the organizations information card to open a
-new window to that organizations home page.
 -   [ ] User can see a page footer with links to your GitHub and social media
 accounts including social media icons (like the Twitter icon).
 

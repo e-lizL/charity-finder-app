@@ -14,7 +14,7 @@ interface IProject {
   projectLink: string,
   image: {
     imagelink: IUrl[]
-  }
+  },
 }
 
 interface ICards {
@@ -22,6 +22,8 @@ interface ICards {
 }
 
 export default function Cards({ projectsData }: ICards) {
+
+  console.log(projectsData[0].projectLink)
 
   return (
     <div className={styles.wrapper}>
@@ -35,11 +37,10 @@ export default function Cards({ projectsData }: ICards) {
             className={styles.image}
           />
           <div className={styles.textWrapper}>
-            <div className={styles.title}>{item.title}</div>
+            <a href={item.projectLink} className={styles.title}>{item.title}</a>
             <div>{item.contactAddress}</div>
             <div>id: {item.id}</div>
           </div>
-          {/* <div>{item.projectLink}</div> */}
         </div>
       ))}
     </div>
