@@ -16,8 +16,9 @@ export default function SplashBanner() {
             <Image
               src="/hands-global.jpg"
               alt="helping hands holding the world"
-              layout="fill"
-              objectFit="contain"
+              fill={true}
+              style={{objectFit: "contain"}}
+              priority
             />
           </div>
         </div>
