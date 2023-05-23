@@ -1,4 +1,4 @@
-import styles from './page.module.css';
+import styles from './page.module.scss';
 import SplashBanner from './components/splash-banner';
 import MainContent from './components/main-content';
 import Footer from './components/footer';

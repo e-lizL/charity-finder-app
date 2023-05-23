@@ -1,4 +1,4 @@
-import styles from './splash-banner.module.css'
+import styles from './splash-banner.module.scss'
 import Image from 'next/image';
 
 

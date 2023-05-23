@@ -1,6 +1,6 @@
 // "use client";
 import React from 'react';
-import styles from './search-component.module.css';
+import styles from './search-component.module.scss';
 
 interface IProject {
   title: string,
