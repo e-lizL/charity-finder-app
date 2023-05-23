@@ -1,12 +1,20 @@
+.wrapper > * {
+  border: 1px solid gray;
+}
 
-.description {
-  border: 1px solid red;
+.wrapper {
 }
 
 .heading {
-  border: 1px solid blue;
+  font-weight: 800;
+  font-size: 3.3em;
 }
 
 .blurb {
-  border: 1px solid green;
+  color: var(--sky-blue);
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.imageWrapper {
 }
