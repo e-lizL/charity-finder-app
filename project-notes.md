@@ -3,10 +3,11 @@
 - engaging UX
 - [Global Giving](https://www.globalgiving.org/)
 
+## Done
+-   [X] User can see a page heading containing the application name.
 
-## Basic Feature
 
--   [ ] User can see a page heading containing the application name.
+## Basic Features
 -   [ ] User can see an overview of what the app is intended for in 'splash'
 page format.
 -   [ ] User can see a search area containing an set of drop down boxes that
@@ -30,8 +31,7 @@ new window to that organizations home page.
 accounts including social media icons (like the Twitter icon).
 
 
-## Bonus features
-
+## Bonus Features
 -   [ ] User can see a search dropdown for themes the charity focuses on.
 -   [ ] User can select multiple options in the search dropdowns.
 -   [ ] User can see a project link (e.g. 'PROJECT') on the organization
