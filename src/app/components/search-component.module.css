@@ -1,9 +1,7 @@
-/* placeholder */
-
 .container {
   margin: 50px auto 50px;
   width: 95%;
-  max-width: 500px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   gap: 30px;
