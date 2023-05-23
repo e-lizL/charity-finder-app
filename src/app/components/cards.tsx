@@ -23,8 +23,6 @@ interface ICards {
 
 export default function Cards({ projectsData }: ICards) {
 
-  console.log(projectsData[0].projectLink)
-
   return (
     <div className={styles.wrapper}>
       {projectsData && projectsData.map(item => (
